@@ -18,6 +18,7 @@ The server requires arguments: port(to listen to).
 The client requires arguments: ip (of the server, including localhost), port(the one the server listens to).
 Placing spaces, dots, and various symbols in unusual places will result in an error as expected and the program
 will close. Also, division by 0 will carry nan.
+Please note, the project is implemented by thread pull and as part of its settings we decided to have a maximum of 5 clients running at the same time, any additional client will not be accepted immediately.
 ## Getting Started
 ### Dependencies
 * This project was made in C++ language, on Clion, Windows 11.
@@ -33,7 +34,7 @@ make
 ```
 * Second, run the server file.
 ```
-./server.out file.csv port
+./server.out port
 ```
 * third, run the client file.
 ```
